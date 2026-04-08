@@ -5,7 +5,14 @@ const ChatContext = createContext();
 
 const ChatProvider = ({ children }) => {
   const [selectedChat, setSelectedChat] = useState();
-  const [user, setUser] = useState();
+  // Initialize synchronously so ChatPage renders correctly on first load
+  const [user, setUser] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('userInfo')) || null;
+    } catch {
+      return null;
+    }
+  });
   const [chats, setChats] = useState([]);
   const [notification, setNotification] = useState([]);
 
@@ -13,14 +20,11 @@ const ChatProvider = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-    setUser(userInfo);
-
-    // Only redirect if they are not logged in and not already on the home page
-    if (!userInfo && location.pathname !== '/') {
+    // Redirect logic only — user is already set from localStorage above
+    if (!user && location.pathname !== '/') {
       navigate('/');
-    } else if (userInfo && location.pathname === '/') {
-       navigate('/chats');
+    } else if (user && location.pathname === '/') {
+      navigate('/chats');
     }
   }, [navigate]);
 
