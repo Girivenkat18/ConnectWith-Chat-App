@@ -1,0 +1,16 @@
+{
+  "name": "connectwith-chat-app",
+  "version": "1.0.0",
+  "description": "ConnectWith MERN Chat Application",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
