@@ -21,7 +21,7 @@ const GroupChatModal = ({ isOpen, onClose, fetchAgain, setFetchAgain }) => {
       const config = {
         headers: { Authorization: `Bearer ${user.token}` },
       };
-      const { data } = await axios.get(`http://localhost:5001/api/auth?search=${query}`, config);
+      const { data } = await axios.get(`/api/auth?search=${query}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -52,7 +52,7 @@ const GroupChatModal = ({ isOpen, onClose, fetchAgain, setFetchAgain }) => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
       const { data } = await axios.post(
-        'http://localhost:5001/api/chats/group',
+        '/api/chats/group',
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
