@@ -205,7 +205,7 @@ const ChatBox = ({ fetchAgain, setFetchAgain }) => {
           <div style={{ textAlign: 'center', marginTop: '50px', color: '#6b7280' }}>
             Loading messages...
           </div>
-        ) : (
+        ) : Array.isArray(messages) ? (
           messages.map((m, i) => {
             const isSent = m.sender._id === user._id;
             return (
@@ -241,7 +241,7 @@ const ChatBox = ({ fetchAgain, setFetchAgain }) => {
               </div>
             );
           })
-        )}
+        ) : null}
         {isTyping && (
           <div className="message received">
             <div className="message-bubble" style={{ padding: '0.5rem 1rem', fontStyle: 'italic', color: '#6b7280' }}>

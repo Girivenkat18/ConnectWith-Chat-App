@@ -161,7 +161,7 @@ const MyChats = ({ fetchAgain, setFetchAgain }) => {
       </div>
 
       <div className="chat-list">
-        {chats ? (
+        {Array.isArray(chats) ? (
           chats.map((chat) => (
             <div
               onClick={() => {
