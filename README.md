@@ -86,3 +86,27 @@ Navigate to `http://localhost:5173` in your browser.
 - React: ^18.2.0
 - Express: ^4.21.0
 - Socket.IO: ^4.8.0
+
+## ConnectWith UI Screenshots
+1. Login Page
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/d9a75a98-9aaa-4cf9-ad45-f86c16b3afb0" />
+
+2. Private Chat with File Upload
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/f241c047-96f2-421c-817d-2cadc7b47e01" />
+
+3. Creating Group Chat
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/7f4c0475-3056-489e-9e4b-a84f31b5bd2d" />
+
+4. Group Chat
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/4abc5a34-966f-4572-b6c7-e5bd480e1de4" />
+
+5. Notifications
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/29bca646-ec67-4368-85cd-8f0efa1c86f3" />
+
+6. Profile Page
+<img width="2880" height="1624" alt="image" src="https://github.com/user-attachments/assets/6e6b01ac-1ce6-47de-9974-d3b254b1a9b6" />
+
+
+
+
+
